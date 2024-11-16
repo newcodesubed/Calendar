@@ -1,38 +1,91 @@
 .goal-card {
-    width: 250px;
+    width: 300px;
     padding: 20px;
-    background-color: #dd3535; /* Off-white color */
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: center;
+    margin: auto;
+    font-family: "Arial", sans-serif;
 }
 
 .goal-card h3 {
-    font-family: sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: #333;
+    margin-bottom: 15px;
 }
 
-.goal-card .stars {
-    margin-top: 20px;
-    color: #f0a500; /* Gold color for stars */
+.goal-card .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.goal-card .stars span {
-    display: inline-block;
-    font-size: 20px;
-    margin-right: 5px;
+.goal-card input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; /* Rounded corners for the input */
+    font-size: 14px;
 }
 
-.goal-card .add-button {
+.goal-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners for the button */
+    background-color: #dd3535;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.goal-card button:hover {
+    background-color: #c12e2e;
+}
+
+.goal-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goal-card ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #555;
+    position: relative;
+}
+
+.goal-card ul li .star {
+    color: #f0a500;
+    margin-right: 8px;
+}
+
+.goal-card ul li .delete-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
-    color: #555;
+    font-size: 14px;
+    color: #dd3535;
     cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-left: 10px;
+}
+
+.goal-card ul li .delete-btn:hover {
+    color: #c12e2e;
 }
